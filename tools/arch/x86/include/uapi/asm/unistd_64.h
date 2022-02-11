@@ -14,3 +14,6 @@
 #ifndef __NR_setns
 #define __NR_setns 308
 #endif
+#ifndef __NR_gettsize
+#define __NR_gettsize 548
+#endif

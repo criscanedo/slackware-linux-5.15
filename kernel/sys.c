@@ -71,6 +71,7 @@
 #include <linux/uaccess.h>
 #include <asm/io.h>
 #include <asm/unistd.h>
+#include <asm/page.h>
 
 #include "uid16.h"
 
@@ -2695,3 +2696,8 @@ COMPAT_SYSCALL_DEFINE1(sysinfo, struct compat_sysinfo __user *, info)
 	return 0;
 }
 #endif /* CONFIG_COMPAT */
+
+SYSCALL_DEFINE0(gettsize)
+{
+	return THREAD_SIZE;
+}
